@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
     <link
       rel="stylesheet"
@@ -27,5 +32,29 @@
 
     <title>Meet Your Hero</title>
   </head>
+  <body>
+    <header class="header__container" id="header__container">
+      <nav class="navbar__container" id="navbar__container">
+        <div class="images__container">
+          <a href="index.html" class="link__logo">
+            <img
+              src="/assets/marvel-logo.png"
+              alt="Marvel logo"
+              width="100px"
+            />
+          </a>
+          <div onclick="displayBurgerMenu()">
+            <i id="burguer__icon" class="fas fa-bars fa-lg"></i>
+          </div>
+        </div>
+        <ul class="navbar__menu" id="navbar__menu">
+          <li class="menu__item" onclick="hideBurgerMenu()">Search</li>
+          <li class="menu__item" onclick="hideBurgerMenu()">Favorites</li>
+        </ul>
+      </nav>
+    </header>
+
+    <script src="/scripts/DOM.js"></script>
+    <script src="/scripts/navigation.js"></script>
+  </body>
 </html>
-<body></body>
