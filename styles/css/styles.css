@@ -110,14 +110,23 @@ body #header__container .navbar__container .navbar__menu__open .menu__item {
   font-family: "Bebas Neue", cursive;
 }
 
-#hero__container {
+body #header__container .hero__container {
   padding: 2rem;
   text-align: center;
   color: #161616;
 }
 
-#hero__container .hero__title {
+body #header__container .hero__container .hero__title {
   font: bold 3rem "Bebas Neue", cursive;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  body #header__container .hero__container {
+    padding: 4rem;
+  }
+  body #header__container .hero__container .hero__title {
+    font: bold 4rem "Bebas Neue", cursive;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
