@@ -74,14 +74,17 @@
           type="text"
           placeholder="Search your hero"
         />
-        <i id="search__icon" class="fas fa-search"></i>
+        <i
+          id="search__icon"
+          class="fas fa-search"
+          onClick="getHeroSearch(0)"
+        ></i>
       </div>
       <ul class="heores__conteiner" id="heores__conteiner"></ul>
     </main>
 
     <script src="/scripts/DOM.js"></script>
-    <script src="/scripts/navigation.js"></script>
     <script src="/scripts/api.js"></script>
-    <script src="/scripts/displaySections.js"></script>
+    <script src="/scripts/navigation.js"></script>
   </body>
 </html>

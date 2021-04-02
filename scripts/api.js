@@ -9,12 +9,23 @@ async function fetchApi(endpoint) {
 }
 
 async function getAllHeroes() {
-  const url = `https://gateway.marvel.com:443/v1/public/characters?orderBy=name&offset=${offset}&ts=1&apikey=${apiKey}&hash=${hash}`;
+  let url = `https://gateway.marvel.com:443/v1/public/characters?orderBy=name&offset=${offset}&ts=1&apikey=${apiKey}&hash=${hash}`;
   const allHeroes = await fetchApi(url);
   console.log(allHeroes);
-
   allHeroes.data.results.map((heroe) => {
     displayHeroes(heroe);
   });
 }
 getAllHeroes();
+
+async function getHeroSearch(offset) {
+  let searchText = $seachInput.val();
+  $heroesConteiner.empty();
+  let url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${searchText}&offset=${offset}&ts=1&apikey=${apiKey}&hash=${hash}`;
+  const heroSearch = await fetchApi(url);
+  console.log(heroSearch);
+  console.log(searchText);
+  heroSearch.data.results.map((heroe) => {
+    displayHeroes(heroe);
+  });
+}
