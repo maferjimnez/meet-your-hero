@@ -48,7 +48,12 @@
           </div>
         </div>
         <ul class="navbar__menu" id="navbar__menu">
-          <li class="menu__item" onclick="hideBurgerMenu()">Search</li>
+          <li
+            class="menu__item"
+            onclick="hideBurgerMenu(); displaySearchSection();"
+          >
+            Search
+          </li>
           <li class="menu__item" onclick="hideBurgerMenu()">Favorites</li>
         </ul>
       </nav>
@@ -61,6 +66,17 @@
         </p>
       </div>
     </header>
+    <main class="main__container" id="main__container">
+      <div class="hide" id="search__container">
+        <input
+          class="search__input"
+          id="search__input"
+          type="text"
+          placeholder="Search your hero"
+        />
+        <i id="search__icon" class="fas fa-search"></i>
+      </div>
+    </main>
 
     <script src="/scripts/DOM.js"></script>
     <script src="/scripts/navigation.js"></script>

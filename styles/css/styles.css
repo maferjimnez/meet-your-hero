@@ -20,7 +20,7 @@ body {
   display: none;
 }
 
-body #header__container .navbar__container {
+#header__container .navbar__container {
   padding: 0.5rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,7 +28,7 @@ body #header__container .navbar__container {
   background-color: #202020;
 }
 
-body #header__container .navbar__container .images__container {
+#header__container .navbar__container .images__container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,26 +41,26 @@ body #header__container .navbar__container .images__container {
           align-items: center;
 }
 
-body #header__container .navbar__container .images__container .link__logo {
+#header__container .navbar__container .images__container .link__logo {
   cursor: pointer;
 }
 
-body #header__container .navbar__container .images__container #burguer__icon {
+#header__container .navbar__container .images__container #burguer__icon {
   cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
-  body #header__container .navbar__container .images__container #burguer__icon {
+  #header__container .navbar__container .images__container #burguer__icon {
     display: none;
   }
 }
 
-body #header__container .navbar__container .navbar__menu {
+#header__container .navbar__container .navbar__menu {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  body #header__container .navbar__container .navbar__menu {
+  #header__container .navbar__container .navbar__menu {
     width: 35vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -72,7 +72,7 @@ body #header__container .navbar__container .navbar__menu {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #header__container .navbar__container .navbar__menu .menu__item {
+  #header__container .navbar__container .navbar__menu .menu__item {
     cursor: pointer;
     color: #f3f5f8;
     font-size: 1.5rem;
@@ -80,7 +80,7 @@ body #header__container .navbar__container .navbar__menu {
   }
 }
 
-body #header__container .navbar__container .navbar__menu__open {
+#header__container .navbar__container .navbar__menu__open {
   width: 100vw;
   height: 100vh;
   padding-bottom: 40vh;
@@ -103,30 +103,102 @@ body #header__container .navbar__container .navbar__menu__open {
           align-items: center;
 }
 
-body #header__container .navbar__container .navbar__menu__open .menu__item {
+#header__container .navbar__container .navbar__menu__open .menu__item {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
   font-family: "Bebas Neue", cursive;
 }
 
-body #header__container .hero__container {
+#header__container .hero__container {
   padding: 2rem;
   text-align: center;
   color: #161616;
 }
 
-body #header__container .hero__container .hero__title {
+#header__container .hero__container .hero__title {
   font: bold 3rem "Bebas Neue", cursive;
   text-transform: uppercase;
 }
 
 @media screen and (min-width: 1024px) {
-  body #header__container .hero__container {
+  #header__container .hero__container {
     padding: 4rem;
   }
-  body #header__container .hero__container .hero__title {
-    font: bold 4rem "Bebas Neue", cursive;
+  #header__container .hero__container .hero__title {
+    font: bold 6rem "Bebas Neue", cursive;
+  }
+  #header__container .hero__container .hero__paragraph {
+    font-size: 20px;
+  }
+}
+
+#main__container {
+  padding: 0 17vw;
+}
+
+#main__container .search__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main__container .search__container .search__input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 5px;
+  font-size: 18px;
+  outline: none;
+  border: 0;
+  border-bottom: 2px solid #ec1923;
+  background-color: #f3f5f8;
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .search__container .search__input {
+    width: 90%;
+    border-bottom: 3px solid #ec1923;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  #main__container .search__container .search__input {
+    width: 80%;
+  }
+}
+
+#main__container .search__container #search__icon {
+  position: absolute;
+  top: 43%;
+  left: 88%;
+  color: #161616;
+}
+
+@media screen and (min-width: 768px) {
+  #main__container .search__container #search__icon {
+    left: 93%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .search__container #search__icon {
+    left: 86%;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  #main__container .search__container #search__icon {
+    left: 84%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #main__container .search__container #search__icon {
+    left: 87%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,79 +1,80 @@
-body {
-  #header__container {
-    .navbar__container {
-      padding: 0.5rem 1rem;
+#header__container {
+  .navbar__container {
+    padding: 0.5rem 1rem;
+    display: flex;
+    background-color: $backgroundDark;
+
+    .images__container {
+      width: 100%;
       display: flex;
-      background-color: $backgroundDark;
+      justify-content: space-between;
+      align-items: center;
 
-      .images__container {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .link__logo {
-          cursor: pointer;
-        }
-        #burguer__icon {
-          cursor: pointer;
-          @media screen and (min-width: $avobe1024) {
-            display: none;
-          }
-        }
+      .link__logo {
+        cursor: pointer;
       }
-
-      .navbar__menu {
-        display: none;
-
+      #burguer__icon {
+        cursor: pointer;
         @media screen and (min-width: $avobe1024) {
-          width: 35vw;
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-
-          .menu__item {
-            cursor: pointer;
-            color: $white;
-            font-size: 1.5rem;
-            font-family: $primary-font;
-          }
+          display: none;
         }
       }
-      .navbar__menu__open {
-        width: 100vw;
-        height: 100vh;
-        padding-bottom: 40vh;
-        position: absolute;
-        left: 0;
-        top: 8vh;
-        background-color: $black;
+    }
+
+    .navbar__menu {
+      display: none;
+
+      @media screen and (min-width: $avobe1024) {
+        width: 35vw;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
 
         .menu__item {
-          margin-bottom: 1rem;
-          font-size: 1.5rem;
           cursor: pointer;
+          color: $white;
+          font-size: 1.5rem;
           font-family: $primary-font;
         }
       }
     }
-    .hero__container {
-      padding: 2rem;
-      text-align: center;
-      color: $black;
+    .navbar__menu__open {
+      width: 100vw;
+      height: 100vh;
+      padding-bottom: 40vh;
+      position: absolute;
+      left: 0;
+      top: 8vh;
+      background-color: $black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      .hero__title {
-        font: bold $medium $primary-font;
-        text-transform: uppercase;
+      .menu__item {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        font-family: $primary-font;
       }
-      @media screen and (min-width: $avobe1024) {
-        padding: 4rem;
-        .hero__title {
-          font: bold $large $primary-font;
-        }
+    }
+  }
+  .hero__container {
+    padding: 2rem;
+    text-align: center;
+    color: $black;
+
+    .hero__title {
+      font: bold $medium $primary-font;
+      text-transform: uppercase;
+    }
+    @media screen and (min-width: $avobe1024) {
+      padding: 4rem;
+      .hero__title {
+        font: bold $large $primary-font;
+      }
+      .hero__paragraph {
+        font-size: 20px;
       }
     }
   }
