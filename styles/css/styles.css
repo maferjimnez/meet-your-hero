@@ -134,7 +134,13 @@ body {
 }
 
 #main__container {
-  padding: 0 17vw;
+  padding: 0 13vw;
+}
+
+@media screen and (min-width: 768px) {
+  #main__container {
+    padding: 0 17vw;
+  }
 }
 
 #main__container .search__container {
@@ -199,6 +205,80 @@ body {
 @media screen and (min-width: 1600px) {
   #main__container .search__container #search__icon {
     left: 87%;
+  }
+}
+
+#main__container .heores__conteiner {
+  margin: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #161616;
+  cursor: pointer;
+}
+
+#main__container .heores__conteiner .heroe {
+  width: 8rem;
+  height: 9rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4%;
+}
+
+@media screen and (min-width: 768px) {
+  #main__container .heores__conteiner .heroe {
+    width: 15rem;
+    height: 15.5rem;
+  }
+}
+
+#main__container .heores__conteiner .heroe :hover {
+  -webkit-box-shadow: 0px 5px 34px -14px #ec1923;
+          box-shadow: 0px 5px 34px -14px #ec1923;
+}
+
+#main__container .heores__conteiner .heroe .heroe__icon {
+  width: 8rem;
+  height: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1%;
+}
+
+@media screen and (min-width: 768px) {
+  #main__container .heores__conteiner .heroe .heroe__icon {
+    width: 15rem;
+    height: 13rem;
+  }
+}
+
+#main__container .heores__conteiner .heroe .heroe__name {
+  font: 1.2rem "Bebas Neue", cursive;
+}
+
+@media screen and (min-width: 768px) {
+  #main__container .heores__conteiner .heroe .heroe__name {
+    font: 1.5rem 'Bebas Neue', cursive;
   }
 }
 /*# sourceMappingURL=styles.css.map */
