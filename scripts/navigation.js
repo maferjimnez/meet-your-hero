@@ -1,5 +1,4 @@
 // Burger menu
-
 function displayBurgerMenu() {
   $burgerMenu.toggleClass('navbar__menu__open');
   $burgerIcon.toggleClass('fa-times');
@@ -10,6 +9,7 @@ function hideBurgerMenu() {
   $burgerIcon.removeClass('fa-times');
 }
 
-function displaySearchSection() {
-  $searchSection.toggleClass('hide').toggleClass('search__container');
-}
+// // Search bar
+// function displaySearchSection() {
+//   $searchSection.toggleClass('hide').toggleClass('search__container');
+// }

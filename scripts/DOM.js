@@ -4,3 +4,6 @@ const $burgerMenu = $('#navbar__menu');
 
 // Search bar
 const $searchSection = $('#search__container');
+
+// Main
+const $heroesConteiner = $('#heores__conteiner');
