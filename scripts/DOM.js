@@ -8,3 +8,4 @@ const $seachInput = $('#search__input');
 
 // Main
 const $heroesConteiner = $('#heores__conteiner');
+const $heroeInfoConteiner = $('#heroe__info');

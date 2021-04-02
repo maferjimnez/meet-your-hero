@@ -29,3 +29,14 @@ async function getHeroSearch(offset) {
     displayHeroes(heroe);
   });
 }
+
+const getSelectedHero = async (id) => {
+  let url = `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=1&apikey=${apiKey}&hash=${hash}`;
+  const result = await fetchApi(url);
+  const selectedHeroe = result.data.results[0];
+  displaySelectedHero(selectedHeroe);
+};
+
+$seachInput.on('input', () => {
+  getHeroSearch(0);
+});
