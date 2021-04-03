@@ -1,0 +1,81 @@
+.heroe__info {
+  width: 100%;
+  height: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .close__details {
+    position: fixed;
+    top: 4%;
+    left: 86%;
+    z-index: 1000;
+    color: $red;
+    filter: drop-shadow(0px 2px 8px white);
+  }
+  .heroe__image {
+    width: 100%;
+    height: 48%;
+    position: fixed;
+    top: -70px;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: $box-shadow;
+    @media screen and (min-width: 478px) {
+      height: 53%;
+    }
+    @media screen and (min-width: 600px) {
+      height: 60%;
+      top: -74px;
+    }
+
+    @media screen and (min-width: $avobe768) {
+      height: 70%;
+      object-position: 51% 25%;
+    }
+    @media screen and (min-width: $avobe1024) {
+      width: 42%;
+      height: 100%;
+      right: 59%;
+      top: 0;
+      object-position: 80% 25%;
+    }
+  }
+  .heroe__details {
+    margin: 40vh 0;
+    text-align: center;
+    @media screen and (min-width: 600px) {
+      margin: 50vh 0;
+    }
+    @media screen and (min-width: $avobe768) {
+      margin: 60vh 0;
+    }
+    @media screen and (min-width: $avobe1024) {
+      margin: 5rem 0 0 40%;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: unset;
+    }
+
+    .heroe__title {
+      font: $medium $primary-font;
+      text-align: center;
+    }
+    .fav__button {
+      .btn {
+        width: 10rem;
+        height: 2.5rem;
+        background-color: $red;
+        border: 1px solid $red;
+        border-radius: 5px;
+        font: 18px $primary-font;
+        color: $white;
+      }
+    }
+  }
+}

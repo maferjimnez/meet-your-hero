@@ -20,7 +20,7 @@ body {
   display: none;
 }
 
-#header__container .navbar__container {
+.header__container .navbar__container {
   padding: 0.5rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,7 +28,7 @@ body {
   background-color: #202020;
 }
 
-#header__container .navbar__container .images__container {
+.header__container .navbar__container .images__container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,26 +41,26 @@ body {
           align-items: center;
 }
 
-#header__container .navbar__container .images__container .link__logo {
+.header__container .navbar__container .images__container .link__logo {
   cursor: pointer;
 }
 
-#header__container .navbar__container .images__container #burguer__icon {
+.header__container .navbar__container .images__container #burguer__icon {
   cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
-  #header__container .navbar__container .images__container #burguer__icon {
+  .header__container .navbar__container .images__container #burguer__icon {
     display: none;
   }
 }
 
-#header__container .navbar__container .navbar__menu {
+.header__container .navbar__container .navbar__menu {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  #header__container .navbar__container .navbar__menu {
+  .header__container .navbar__container .navbar__menu {
     width: 35vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -72,7 +72,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  #header__container .navbar__container .navbar__menu .menu__item {
+  .header__container .navbar__container .navbar__menu .menu__item {
     cursor: pointer;
     color: #f3f5f8;
     font-size: 1.5rem;
@@ -80,7 +80,7 @@ body {
   }
 }
 
-#header__container .navbar__container .navbar__menu__open {
+.header__container .navbar__container .navbar__menu__open {
   width: 100vw;
   height: 100vh;
   padding-bottom: 40vh;
@@ -103,32 +103,32 @@ body {
           align-items: center;
 }
 
-#header__container .navbar__container .navbar__menu__open .menu__item {
+.header__container .navbar__container .navbar__menu__open .menu__item {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
   font-family: "Bebas Neue", cursive;
 }
 
-#header__container .hero__container {
+.header__container .hero__container {
   padding: 2rem;
   text-align: center;
   color: #161616;
 }
 
-#header__container .hero__container .hero__title {
+.header__container .hero__container .hero__title {
   font: bold 3rem "Bebas Neue", cursive;
   text-transform: uppercase;
 }
 
 @media screen and (min-width: 1024px) {
-  #header__container .hero__container {
+  .header__container .hero__container {
     padding: 4rem;
   }
-  #header__container .hero__container .hero__title {
+  .header__container .hero__container .hero__title {
     font: bold 6rem "Bebas Neue", cursive;
   }
-  #header__container .hero__container .hero__paragraph {
+  .header__container .hero__container .hero__paragraph {
     font-size: 20px;
   }
 }
@@ -280,5 +280,131 @@ body {
   #main__container .heores__conteiner .heroe .heroe__name {
     font: 1.5rem 'Bebas Neue', cursive;
   }
+}
+
+#main__container .heroe__info {
+  width: 100%;
+  height: 100%;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#main__container .heroe__info .close__details {
+  position: fixed;
+  top: 4%;
+  left: 86%;
+  z-index: 1000;
+  color: #ec1923;
+  -webkit-filter: drop-shadow(0px 2px 8px white);
+          filter: drop-shadow(0px 2px 8px white);
+}
+
+#main__container .heroe__info .heroe__image {
+  width: 100%;
+  height: 48%;
+  position: fixed;
+  top: -70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  -webkit-box-shadow: 0px 12px 8px #00000029;
+          box-shadow: 0px 12px 8px #00000029;
+}
+
+@media screen and (min-width: 478px) {
+  #main__container .heroe__info .heroe__image {
+    height: 53%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #main__container .heroe__info .heroe__image {
+    height: 60%;
+    top: -74px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #main__container .heroe__info .heroe__image {
+    height: 70%;
+    -o-object-position: 51% 25%;
+       object-position: 51% 25%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .heroe__info .heroe__image {
+    width: 42%;
+    height: 100%;
+    right: 59%;
+    top: 0;
+    -o-object-position: 80% 25%;
+       object-position: 80% 25%;
+  }
+}
+
+#main__container .heroe__info .heroe__details {
+  margin: 40vh 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  #main__container .heroe__info .heroe__details {
+    margin: 50vh 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #main__container .heroe__info .heroe__details {
+    margin: 60vh 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .heroe__info .heroe__details {
+    margin: 5rem 0 0 40%;
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: unset;
+  }
+}
+
+#main__container .heroe__info .heroe__details .heroe__title {
+  font: 3rem "Bebas Neue", cursive;
+  text-align: center;
+}
+
+#main__container .heroe__info .heroe__details .fav__button .btn {
+  width: 10rem;
+  height: 2.5rem;
+  background-color: #ec1923;
+  border: 1px solid #ec1923;
+  border-radius: 5px;
+  font: 18px "Bebas Neue", cursive;
+  color: #f3f5f8;
 }
 /*# sourceMappingURL=styles.css.map */

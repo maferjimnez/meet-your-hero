@@ -24,19 +24,31 @@ function displayHeroes(heroe) {
 }
 displayHeroes();
 
+function closeSelectedHero() {
+  $heroeInfoConteiner.removeClass('heroe__info').addClass('hide');
+  $headerContainer.removeClass('hide').addClass('header__container');
+  $searchSection.removeClass('hide').addClass('search__container');
+  $heroesConteiner.removeClass('hide').addClass('heores__conteiner');
+}
+
 async function displaySelectedHero(heroe) {
-  console.log(heroe);
+  $heroeInfoConteiner.removeClass('hide').addClass('heroe__info');
+  $headerContainer.addClass('hide').removeClass('header__container');
+  $searchSection.addClass('hide').removeClass('search__container');
+  $heroesConteiner.addClass('hide').removeClass('heores__conteiner');
+
   $heroeInfoConteiner.html(
     `
-    <img src="${heroe.thumbnail.path}.${heroe.thumbnail.extension}" />
+    <i id="close__details" class="far fa-times-circle fa-2x close__details" onClick="closeSelectedHero();"></i>
+    <img class="heroe__image" src="${heroe.thumbnail.path}.${heroe.thumbnail.extension}" />
     <div class="heroe__details">
-        <h1>${heroe.name}</h1>
-        <p>${heroe.description}</p>
-    </div>
+        <h1 class="heroe__title">${heroe.name}</h1>
+        <p class="heroe__description">${heroe.description}</p>
     <div class="heroe__comics">
     </div>
     <div class="fav__button">
-        <button>Add to favorite</button>
+        <button class="btn">Add to favorite</button>
+    </div>
     </div>
     `
   );
