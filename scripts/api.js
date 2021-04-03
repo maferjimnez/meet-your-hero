@@ -8,15 +8,18 @@ async function fetchApi(endpoint) {
   return await response.json();
 }
 
-async function getAllHeroes() {
+async function getAllHeroes(offset) {
+  $heroesConteiner.html('');
   let url = `https://gateway.marvel.com:443/v1/public/characters?orderBy=name&offset=${offset}&ts=1&apikey=${apiKey}&hash=${hash}`;
   const allHeroes = await fetchApi(url);
   console.log(allHeroes);
+  setPaginationBtns(allHeroes, false);
   allHeroes.data.results.map((heroe) => {
     displayHeroes(heroe);
   });
+  sessionStorage.setItem('offset', offset);
 }
-getAllHeroes();
+getAllHeroes(0);
 
 async function getHeroSearch(offset) {
   let searchText = $seachInput.val();

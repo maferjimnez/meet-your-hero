@@ -407,4 +407,53 @@ body {
   font: 18px "Bebas Neue", cursive;
   color: #f3f5f8;
 }
+
+#main__container .pagination-container {
+  margin: 2rem;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main__container .pagination-container .change-page-btn {
+  margin: 0 10px;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ec1923;
+  border: 3px solid #ec1923;
+  border-radius: 5px;
+  font: 1.5rem "Bebas Neue", cursive;
+  color: #f3f5f8;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .pagination-container .change-page-btn {
+    margin: 0 15px;
+  }
+}
+
+#main__container .pagination-container .change-page-btn:hover {
+  background-color: #f3f5f8;
+  color: #ec1923;
+  -webkit-box-shadow: 0px 12px 8px #00000029;
+          box-shadow: 0px 12px 8px #00000029;
+}
+
+#main__container .pagination-container .page-number {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .pagination-container .page-number {
+    font-size: 1.2rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

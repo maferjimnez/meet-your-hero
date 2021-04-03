@@ -1,0 +1,33 @@
+.pagination-container {
+  margin: 2rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .change-page-btn {
+    margin: 0 10px;
+    width: 2rem;
+    height: 2rem;
+    background-color: $red;
+    border: 3px solid $red;
+    border-radius: 5px;
+    font: 1.5rem $primary-font;
+    color: $white;
+    cursor: pointer;
+    @media screen and (min-width: $avobe1024) {
+      margin: 0 15px;
+    }
+    &:hover {
+      background-color: $white;
+      color: $red;
+      box-shadow: $box-shadow;
+    }
+  }
+  .page-number {
+    font-weight: bold;
+    @media screen and (min-width: $avobe1024) {
+      font-size: $small;
+    }
+  }
+}
