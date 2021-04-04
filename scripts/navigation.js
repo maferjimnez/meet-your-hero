@@ -18,7 +18,9 @@ function displayHeroes(heroe) {
   $heroesConteiner.append(`
       <li class="heroe" id="heroe" onClick="getSelectedHero(${heroe.id})">
         <img class="heroe__icon" src="${heroe.thumbnail.path}.${heroe.thumbnail.extension}"/>
-        <p class="heroe__name">${heroe.name}</p>
+        <div class="name-wrapper">
+          <p class="heroe__name">${heroe.name}</p>
+        </div>
       </li>
       `);
 }
