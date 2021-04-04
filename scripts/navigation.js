@@ -40,18 +40,38 @@ async function displaySelectedHero(heroe) {
   $heroeInfoConteiner.html(
     `
     <i id="close__details" class="far fa-times-circle fa-2x close__details" onClick="closeSelectedHero();"></i>
-    <img class="heroe__image" src="${heroe.thumbnail.path}.${heroe.thumbnail.extension}" />
+    <img class="heroe__image" src="${heroe.thumbnail.path}.${
+      heroe.thumbnail.extension
+    }" />
     <div class="heroe__details">
         <h1 class="heroe__title">${heroe.name}</h1>
         <p class="heroe__description">${heroe.description}</p>
     <div class="heroe__comics">
     </div>
     <div class="fav__button">
-        <button class="btn">Add to favorite</button>
+    ${
+      JSON.parse(localStorage.getItem('FavouriteHeroe').includes(heroe.id))
+        ? `<button class="btn" onClick="removeHeroeFromFavourites('${heroe.id}')">Remove from favorites</button>`
+        : ` <button class="btn" onClick="addHeroeToFavourites('${heroe.name}', '${heroe.id}' ,'${heroe.thumbnail.path}.${heroe.thumbnail.extension}')">Add to favorites</button>`
+    }
     </div>
     </div>
     `
   );
+}
+
+function displayFavourites() {
+  $searchSection.addClass('hide').removeClass('search__container');
+  $paginationContainer.addClass('hide').removeClass('pagination-container');
+  $heroesConteiner.html('');
+  $heroTitle.html('').html('Your favourites');
+  $heroDescription.addClass('hide').removeClass('hero__paragraph');
+
+  const arrayFavouritesStoraged = JSON.parse(
+    localStorage.getItem('FavouriteHeroe')
+  );
+  console.log(arrayFavouritesStoraged);
+  arrayFavouritesStoraged;
 }
 
 // ** Events ** //
