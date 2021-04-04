@@ -9,11 +9,6 @@ function hideBurgerMenu() {
   $burgerIcon.removeClass('fa-times');
 }
 
-// // Search bar
-// function displaySearchSection() {
-//   $searchSection.toggleClass('hide').toggleClass('search__container');
-// }
-
 function displayHeroes(heroe) {
   $heroesConteiner.append(`
       <li class="heroe" id="heroe" onClick="getSelectedHero(${heroe.id})">
@@ -32,14 +27,23 @@ function closeSelectedHero() {
   $searchSection.removeClass('hide').addClass('search__container');
   $heroesConteiner.removeClass('hide').addClass('heores__conteiner');
 }
+function displayHeroeComics(comics) {
+  return comics.map(
+    (comic) => `
+    <img src="${comic.images[0].path}.${comic.images[0].extension}"/>
+  <p>${comic.title}</p>
+    `
+  );
+}
 
-async function displaySelectedHero(heroe) {
+function displaySelectedHero(heroe, comics) {
   $heroeInfoConteiner.removeClass('hide').addClass('heroe__info');
   $headerContainer.addClass('hide').removeClass('header__container');
   $searchSection.addClass('hide').removeClass('search__container');
   $heroesConteiner.addClass('hide').removeClass('heores__conteiner');
   $paginationContainer.addClass('hide').removeClass('pagination-container');
-
+  let comicData = comics[0];
+  console.log(comicData);
   $heroeInfoConteiner.html(
     `
     <i id="close__details" class="far fa-times-circle fa-2x close__details" onClick="closeSelectedHero();"></i>
@@ -49,8 +53,9 @@ async function displaySelectedHero(heroe) {
     <div class="heroe__details">
         <h1 class="heroe__title">${heroe.name}</h1>
         <p class="heroe__description">${heroe.description}</p>
-    <div class="heroe__comics">
-    </div>
+        <div id="heroe__comics">
+        ${displayHeroeComics(comicData)}
+        </div>
     <div class="fav__button">
     ${
       JSON.parse(localStorage.getItem('FavouriteHeroe').includes(heroe.id))

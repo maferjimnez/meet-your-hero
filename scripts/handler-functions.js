@@ -18,7 +18,7 @@ function setNextPage(searched) {
   var offset = parseInt(sessionStorage.getItem('offset'));
   offset += 20;
   sessionStorage.setItem('offset', offset);
-  searched ? getSearchHero(offset) : getAllHeroes(offset);
+  searched ? getHeroSearch(offset) : getAllHeroes(offset);
 }
 
 function setPreviousPage(searched) {
@@ -26,7 +26,7 @@ function setPreviousPage(searched) {
   var offset = parseInt(sessionStorage.getItem('offset'));
   offset -= 20;
   sessionStorage.setItem('offset', offset);
-  searched ? getSearchHero(offset) : getAllHeroes(offset);
+  searched ? getHeroSearch(offset) : getAllHeroes(offset);
 }
 
 // ** Favorites ** //

@@ -24,3 +24,4 @@ const $heroeInfoConteiner = $('#heroe__info');
 
 // Max heroe information
 const $closeHeroeIcon = $('#close__details');
+const $heroeComics = $('#heroe__comics');

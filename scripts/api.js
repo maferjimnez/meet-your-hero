@@ -26,20 +26,41 @@ async function getHeroSearch(offset) {
   $heroesConteiner.empty();
   let url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${searchText}&offset=${offset}&ts=1&apikey=${apiKey}&hash=${hash}`;
   const heroSearch = await fetchApi(url);
-  console.log(heroSearch);
-  console.log(searchText);
+  setPaginationBtns(heroSearch, true);
+
   heroSearch.data.results.map((heroe) => {
     displayHeroes(heroe);
   });
+}
+
+async function getHeroeComics(heroeId) {
+  let comicsArr = [];
+  let url = `https://gateway.marvel.com:443/v1/public/characters/${heroeId}/comics?limit=3&ts=1&apikey=${apiKey}&hash=${hash}`;
+  const heroeComics = await fetchApi(url);
+  const comicsData = heroeComics.data.results;
+  comicsArr.push(comicsData);
+  return comicsArr;
 }
 
 const getSelectedHero = async (id) => {
   let url = `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=1&apikey=${apiKey}&hash=${hash}`;
   const result = await fetchApi(url);
   const selectedHeroe = result.data.results[0];
-  displaySelectedHero(selectedHeroe);
+  const comics = await getHeroeComics(id);
+  displaySelectedHero(selectedHeroe, comics);
+  getHeroeComics(id);
 };
 
 $seachInput.on('input', () => {
-  getHeroSearch(0);
+  $heroesConteiner.html('');
+  if (
+    $seachInput.val() == 0 ||
+    $seachInput.val() == null ||
+    $seachInput.val() == ''
+  ) {
+    getAllHeroes(0);
+    displayHeroes(heroe);
+  } else {
+    getHeroSearch(0);
+  }
 });
