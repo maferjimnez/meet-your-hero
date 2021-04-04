@@ -1,0 +1,23 @@
+.loader-container {
+  position: absolute;
+  top: 13%;
+  left: 0;
+  z-index: 1000;
+  background-color: $white;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .loader-image {
+    width: 12rem;
+  }
+  .loader-text {
+    margin-top: 1rem;
+    color: $black;
+    font: 1.5rem $primary-font;
+  }
+}

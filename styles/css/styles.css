@@ -527,4 +527,38 @@ body {
     font-size: 1.2rem;
   }
 }
+
+#main__container .loader-container {
+  position: absolute;
+  top: 13%;
+  left: 0;
+  z-index: 1000;
+  background-color: #f3f5f8;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main__container .loader-container .loader-image {
+  width: 12rem;
+}
+
+#main__container .loader-container .loader-text {
+  margin-top: 1rem;
+  color: #161616;
+  font: 1.5rem "Bebas Neue", cursive;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -11,6 +11,9 @@ const $heroTitle = $('#hero__title');
 const $heroDescription = $('#hero__paragraph');
 
 //** Main**//
+// Loader
+const $loaderContainer = $('#loader-container');
+
 // Search bar
 const $searchSection = $('#search__container');
 const $seachInput = $('#search__input');

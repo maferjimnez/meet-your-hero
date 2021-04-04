@@ -37,6 +37,7 @@ function displayHeroeComics(comics) {
 }
 
 function displaySelectedHero(heroe, comics) {
+  $loaderContainer.removeClass('hide');
   $heroeInfoConteiner.removeClass('hide').addClass('heroe__info');
   $headerContainer.addClass('hide').removeClass('header__container');
   $searchSection.addClass('hide').removeClass('search__container');
@@ -66,9 +67,11 @@ function displaySelectedHero(heroe, comics) {
     </div>
     `
   );
+  $loaderContainer.addClass('hide');
 }
 
 function displayFavorites(heroe) {
+  $loaderContainer.removeClass('hide');
   $heroesConteiner.html('');
   $heroTitle.html('Favorites');
   $heroDescription.html('');
@@ -81,6 +84,7 @@ function displayFavorites(heroe) {
   } else {
     $heroesConteiner.html('<h1>no hay heroes</h1>');
   }
+  $loaderContainer.addClass('hide');
 }
 
 // ** Events ** //

@@ -1,7 +1,6 @@
 // keys
 const apiKey = '771e0252084f55d7429ca496bc3e5501';
 const hash = 'bc8e05b427a30ee4f5a5f6da8059dbf8';
-const offset = '20';
 
 async function fetchApi(endpoint) {
   const response = await fetch(endpoint);
@@ -9,6 +8,7 @@ async function fetchApi(endpoint) {
 }
 
 async function getAllHeroes(offset) {
+  $loaderContainer.removeClass('hide').addClass('loader-container');
   $heroesConteiner.html('');
   let url = `https://gateway.marvel.com:443/v1/public/characters?orderBy=name&offset=${offset}&ts=1&apikey=${apiKey}&hash=${hash}`;
   const allHeroes = await fetchApi(url);
@@ -18,6 +18,7 @@ async function getAllHeroes(offset) {
     displayHeroes(heroe);
   });
   sessionStorage.setItem('offset', offset);
+  $loaderContainer.addClass('hide').removeClass('loader-container');
 }
 getAllHeroes(0);
 
@@ -59,8 +60,13 @@ $seachInput.on('input', () => {
     $seachInput.val() == ''
   ) {
     getAllHeroes(0);
-    displayHeroes(heroe);
   } else {
+    getHeroSearch(0);
+  }
+});
+
+$seachInput.on('keypress', (e) => {
+  if (e.which == 13) {
     getHeroSearch(0);
   }
 });
