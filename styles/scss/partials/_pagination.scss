@@ -15,6 +15,7 @@
     font: 1.5rem $primary-font;
     color: $white;
     cursor: pointer;
+    outline: none;
     @media screen and (min-width: $avobe1024) {
       margin: 0 15px;
     }

@@ -71,10 +71,17 @@
         width: 10rem;
         height: 2.5rem;
         background-color: $red;
-        border: 1px solid $red;
+        border: 3px solid $red;
         border-radius: 5px;
         font: 18px $primary-font;
         color: $white;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+          background-color: $white;
+          color: $red;
+          box-shadow: $box-shadow;
+        }
       }
     }
   }
