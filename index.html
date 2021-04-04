@@ -54,13 +54,15 @@
           >
             Search
           </li>
-          <li class="menu__item" onclick="hideBurgerMenu()">Favorites</li>
+          <li class="menu__item" onclick="hideBurgerMenu(); displayFavorites()">
+            Favorites
+          </li>
         </ul>
       </nav>
 
       <div class="hero__container" id="hero__container">
-        <h1 class="hero__title">Meet your hero</h1>
-        <p class="hero__paragraph">
+        <h1 class="hero__title" id="hero__title">Meet your hero</h1>
+        <p class="hero__paragraph" id="hero__paragraph">
           Find every Marvel superhero and discover their history and appearances
           in comics.
         </p>
@@ -88,7 +90,7 @@
 
     <script src="/scripts/DOM.js"></script>
     <script src="/scripts/navigation.js"></script>
-    <script src="/scripts/pagination.js"></script>
+    <script src="/scripts/handler-functions.js"></script>
     <script src="/scripts/api.js"></script>
   </body>
 </html>

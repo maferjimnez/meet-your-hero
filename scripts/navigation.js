@@ -36,6 +36,7 @@ async function displaySelectedHero(heroe) {
   $headerContainer.addClass('hide').removeClass('header__container');
   $searchSection.addClass('hide').removeClass('search__container');
   $heroesConteiner.addClass('hide').removeClass('heores__conteiner');
+  $paginationContainer.addClass('hide').removeClass('pagination-container');
 
   $heroeInfoConteiner.html(
     `
@@ -52,7 +53,7 @@ async function displaySelectedHero(heroe) {
     ${
       JSON.parse(localStorage.getItem('FavouriteHeroe').includes(heroe.id))
         ? `<button class="btn" onClick="removeHeroeFromFavourites('${heroe.id}')">Remove from favorites</button>`
-        : ` <button class="btn" onClick="addHeroeToFavourites('${heroe.name}', '${heroe.id}' ,'${heroe.thumbnail.path}.${heroe.thumbnail.extension}')">Add to favorites</button>`
+        : ` <button class="btn" onClick="addHeroeToFavourites('${heroe.name}', '${heroe.id}' ,'${heroe.thumbnail.path}', '${heroe.thumbnail.extension}')">Add to favorites</button>`
     }
     </div>
     </div>
@@ -60,18 +61,19 @@ async function displaySelectedHero(heroe) {
   );
 }
 
-function displayFavourites() {
+function displayFavorites(heroe) {
+  $heroesConteiner.html('');
+  $heroTitle.html('Favorites');
+  $heroDescription.html('');
   $searchSection.addClass('hide').removeClass('search__container');
   $paginationContainer.addClass('hide').removeClass('pagination-container');
-  $heroesConteiner.html('');
-  $heroTitle.html('').html('Your favourites');
-  $heroDescription.addClass('hide').removeClass('hero__paragraph');
+  let arrayFavouritesHeroe = JSON.parse(localStorage.getItem('FavouriteHeroe'));
 
-  const arrayFavouritesStoraged = JSON.parse(
-    localStorage.getItem('FavouriteHeroe')
-  );
-  console.log(arrayFavouritesStoraged);
-  arrayFavouritesStoraged;
+  if (arrayFavouritesHeroe.length > 0) {
+    arrayFavouritesHeroe.map((heroe) => displayHeroes(heroe));
+  } else {
+    $heroesConteiner.html('<h1>no hay heroes</h1>');
+  }
 }
 
 // ** Events ** //

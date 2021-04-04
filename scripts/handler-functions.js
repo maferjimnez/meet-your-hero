@@ -29,26 +29,26 @@ function setPreviousPage(searched) {
   searched ? getSearchHero(offset) : getAllHeroes(offset);
 }
 
-// ** Favourites ** //
-let arrayFavouritesHeroe = [];
-if (localStorage.getItem('FavouriteHeroe') === null) {
-  arrayFavouritesHeroe = [];
-} else {
-  arrayFavouritesHeroe = JSON.parse(localStorage.getItem('FavouriteHeroe'));
-}
+// ** Favorites ** //
 
-function addHeroeToFavourites(name, id, image) {
+function addHeroeToFavourites(name, id, path, extension) {
+  let arrayFavouritesHeroe = JSON.parse(localStorage.getItem('FavouriteHeroe'));
+
   let objHeroe = {
     name: name,
     id: id,
-    image: image,
+    thumbnail: {
+      path: path,
+      extension: extension,
+    },
   };
   arrayFavouritesHeroe.push(objHeroe);
   localStorage.setItem('FavouriteHeroe', JSON.stringify(arrayFavouritesHeroe));
-  displayFavourites();
 }
 
 function removeHeroeFromFavourites(id) {
+  let arrayFavouritesHeroe = JSON.parse(localStorage.getItem('FavouriteHeroe'));
+
   for (let i = 0; i < arrayFavouritesHeroe.length; i++)
     if (arrayFavouritesHeroe[i].id === id) {
       arrayFavouritesHeroe.splice(i, 1);
@@ -57,5 +57,6 @@ function removeHeroeFromFavourites(id) {
         JSON.stringify(arrayFavouritesHeroe)
       );
     }
+  console.log(arrayFavouritesHeroe);
   displayFavourites();
 }
