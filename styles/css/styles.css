@@ -6,13 +6,13 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   color: #f3f5f8;
-  -webkit-transition: 0.3 ease-in-out;
-  transition: 0.3 ease-in-out;
   background-color: #f3f5f8;
 }
 
@@ -26,6 +26,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #202020;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__container .navbar__container {
+    padding: 0.5rem 7rem;
+  }
 }
 
 .header__container .navbar__container .images__container {
@@ -45,6 +51,16 @@ body {
   cursor: pointer;
 }
 
+.header__container .navbar__container .images__container .link__logo .logo-img {
+  width: 7rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__container .navbar__container .images__container .link__logo .logo-img {
+    width: 8rem;
+  }
+}
+
 .header__container .navbar__container .images__container #burguer__icon {
   cursor: pointer;
 }
@@ -57,7 +73,6 @@ body {
 
 .header__container .navbar__container .navbar__menu {
   display: none;
-  z-index: 1000;
 }
 
 @media screen and (min-width: 1024px) {
@@ -88,6 +103,7 @@ body {
   position: absolute;
   left: 0;
   top: 8vh;
+  z-index: 1000;
   background-color: #161616;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,7 +160,7 @@ body {
 
 @media screen and (min-width: 768px) {
   #main__container {
-    padding: 0 17vw;
+    padding: 0 14vw;
   }
 }
 
@@ -214,23 +230,31 @@ body {
 }
 
 #main__container .heores__conteiner {
-  margin: 5rem 0;
+  margin: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  #main__container .heores__conteiner {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 #main__container .heores__conteiner .heroe {
   width: 18rem;
-  height: 17rem;
+  height: 18rem;
   margin-bottom: 2rem;
   position: relative;
   display: -webkit-box;

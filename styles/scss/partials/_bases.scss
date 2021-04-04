@@ -5,12 +5,12 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
+  transition: $transition;
 }
 
 body {
   font-family: $secondary-font;
   color: $white;
-  transition: $transition;
   background-color: $white;
 }
 

@@ -3,6 +3,9 @@
     padding: 0.5rem 1rem;
     display: flex;
     background-color: $backgroundDark;
+    @media screen and (min-width: $avobe1024) {
+      padding: 0.5rem 7rem;
+    }
 
     .images__container {
       width: 100%;
@@ -12,6 +15,13 @@
 
       .link__logo {
         cursor: pointer;
+
+        .logo-img {
+          width: 7rem;
+          @media screen and (min-width: $avobe1024) {
+            width: 8rem;
+          }
+        }
       }
       #burguer__icon {
         cursor: pointer;
@@ -23,8 +33,6 @@
 
     .navbar__menu {
       display: none;
-      z-index: 1000;
-
       @media screen and (min-width: $avobe1024) {
         width: 35vw;
         display: flex;
@@ -36,6 +44,9 @@
           color: $white;
           font-size: 1.5rem;
           font-family: $primary-font;
+          .home {
+            color: $white;
+          }
         }
       }
     }
@@ -46,6 +57,7 @@
       position: absolute;
       left: 0;
       top: 8vh;
+      z-index: 1000;
       background-color: $black;
       display: flex;
       flex-direction: column;
