@@ -30,7 +30,7 @@ function setPreviousPage(searched) {
 }
 
 // ** Favorites ** //
-
+localStorage.setItem('FavouriteHeroe', '[]');
 function addHeroeToFavourites(name, id, path, extension) {
   let arrayFavouritesHeroe = JSON.parse(localStorage.getItem('FavouriteHeroe'));
 
