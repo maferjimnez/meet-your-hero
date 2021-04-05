@@ -1,0 +1,19 @@
+.hero__container {
+  padding: 2rem;
+  text-align: center;
+  color: $black;
+
+  .hero__title {
+    font: bold $medium $primary-font;
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: $avobe1024) {
+    padding: 4rem;
+    .hero__title {
+      font: bold $large $primary-font;
+    }
+    .hero__paragraph {
+      font-size: 20px;
+    }
+  }
+}

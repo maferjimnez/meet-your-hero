@@ -513,12 +513,6 @@ body {
           box-shadow: 0px 12px 8px #00000029;
 }
 
-@media screen and (min-width: 768px) {
-  #main__container {
-    padding: 0 14vw;
-  }
-}
-
 #main__container .search__container {
   position: relative;
   display: -webkit-box;
@@ -606,9 +600,8 @@ body {
 
 @media screen and (min-width: 768px) {
   #main__container .heores__conteiner {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -697,6 +690,12 @@ body {
 @media screen and (min-width: 768px) {
   #main__container .heores__conteiner .heroe .name-wrapper .heroe__name {
     font: 1.2rem "Bebas Neue", cursive;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #main__container {
+    padding: 0 14vw;
   }
 }
 
