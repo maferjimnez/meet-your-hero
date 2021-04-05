@@ -1,0 +1,17 @@
+.footer-container {
+  width: 100%;
+  height: 4rem;
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer-text {
+    color: $white;
+    font: $small $primary-font;
+    cursor: pointer;
+    &:hover {
+      color: $red;
+    }
+  }
+}

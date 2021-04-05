@@ -25,6 +25,7 @@ function closeSelectedHero() {
   window.scrollTo({ top: 0, behavior: 'auto' });
   $loaderContainer.removeClass('hide').addClass('loader-container');
   $heroeInfoConteiner.removeClass('heroe__info').addClass('hide');
+  $footerContainer.removeClass('hide').addClass('footer-container');
   $headerContainer.removeClass('hide').addClass('header__container');
   $searchSection.removeClass('hide').addClass('search__container');
   $heroesConteiner.removeClass('hide').addClass('heores__conteiner');
@@ -47,6 +48,7 @@ function displaySelectedHero(heroe, comics) {
   $loaderContainer.removeClass('hide').addClass('loader-container');
   window.scrollTo({ top: 0, behavior: 'auto' });
   $heroeInfoConteiner.removeClass('hide').addClass('heroe__info');
+  $footerContainer.addClass('hide').removeClass('footer-container');
   $headerContainer.addClass('hide').removeClass('header__container');
   $searchSection.addClass('hide').removeClass('search__container');
   $heroesConteiner.addClass('hide').removeClass('heores__conteiner');
@@ -116,8 +118,3 @@ function displayError(error) {
   </div>
   `);
 }
-
-// ** Events ** //
-$seachInput.on('input', () => {
-  getHeroSearch(0);
-});
