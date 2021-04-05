@@ -3,11 +3,12 @@ Challenge para Eurekalabs.
 
 ## Sobre el challenge:
 Aplicación web para conocer a todos los héroes de Marvel, su historia y su aparación en cómics.
+Link a la demo [Meet Your Hero](https://meet-your-hero-mafer.vercel.app/index.html)
 
 ## Stacks:
 * HTML
 * Sass (scss)
-* Javascript
+* Javascript + jQuery
 
 ## Herramientas y recursos:
 * [Marvel Api](https://developer.marvel.com/)
