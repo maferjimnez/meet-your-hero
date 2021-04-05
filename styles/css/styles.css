@@ -94,8 +94,14 @@ body {
     font-size: 1.5rem;
     font-family: "Bebas Neue", cursive;
   }
+  .header__container .navbar__container .navbar__menu .menu__item:hover {
+    color: #ec1923;
+  }
   .header__container .navbar__container .navbar__menu .menu__item .home {
     color: #f3f5f8;
+  }
+  .header__container .navbar__container .navbar__menu .menu__item .home:hover {
+    color: #ec1923;
   }
 }
 
@@ -161,6 +167,335 @@ body {
   padding: 0 13vw;
 }
 
+#main__container .heroe__info {
+  width: 100%;
+  height: 100%;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#main__container .heroe__info .close__details {
+  position: fixed;
+  top: 4%;
+  left: 86%;
+  z-index: 1000;
+  color: #ec1923;
+  -webkit-filter: drop-shadow(0px 2px 8px white);
+          filter: drop-shadow(0px 2px 8px white);
+  cursor: pointer;
+}
+
+#main__container .heroe__info .heroe__image {
+  width: 100%;
+  height: 48%;
+  position: fixed;
+  top: -70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  -webkit-box-shadow: 0px 12px 8px #00000029;
+          box-shadow: 0px 12px 8px #00000029;
+}
+
+@media screen and (min-width: 478px) {
+  #main__container .heroe__info .heroe__image {
+    height: 53%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #main__container .heroe__info .heroe__image {
+    height: 60%;
+    top: -74px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #main__container .heroe__info .heroe__image {
+    height: 70%;
+    -o-object-position: 51% 25%;
+       object-position: 51% 25%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .heroe__info .heroe__image {
+    width: 42%;
+    height: 100%;
+    right: 59%;
+    top: 0;
+    -o-object-position: 80% 25%;
+       object-position: 80% 25%;
+  }
+}
+
+#main__container .heroe__info .heroe__details {
+  margin: 40vh 0 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  #main__container .heroe__info .heroe__details {
+    margin: 50vh 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #main__container .heroe__info .heroe__details {
+    margin: 60vh 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .heroe__info .heroe__details {
+    margin: 0 0 0 40%;
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: unset;
+  }
+}
+
+#main__container .heroe__info .heroe__details .heroe__title {
+  font: 3rem "Bebas Neue", cursive;
+  text-align: center;
+}
+
+#main__container .heroe__info .heroe__details .heroe__comics {
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .heroe__info .heroe__details .heroe__comics {
+    margin: 2rem 0 1rem 0;
+  }
+}
+
+#main__container .heroe__info .heroe__details .heroe__comics .comics-title {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .heroe__info .heroe__details .heroe__comics .comics-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 123%;
+  }
+}
+
+#main__container .heroe__info .heroe__details .heroe__comics .comics-wrapper .comic-wrapper {
+  margin-bottom: 2rem;
+  text-align: center;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+#main__container .heroe__info .heroe__details .heroe__comics .comics-wrapper .comic-wrapper .img-comic {
+  width: 15rem;
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .heroe__info .heroe__details .heroe__comics .comics-wrapper .comic-wrapper .img-comic {
+    width: 11rem;
+  }
+}
+
+#main__container .heroe__info .heroe__details .heroe__comics .comics-wrapper .comic-wrapper .title-comic {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1240px) {
+  #main__container .heroe__info .heroe__details .heroe__comics .comics-wrapper .comic-wrapper .title-comic {
+    font-size: 1rem;
+  }
+}
+
+#main__container .heroe__info .heroe__details .fav__button {
+  margin-bottom: 2rem;
+}
+
+#main__container .heroe__info .heroe__details .fav__button .btn {
+  width: 10rem;
+  height: 2.5rem;
+  background-color: #ec1923;
+  border: 3px solid #ec1923;
+  border-radius: 5px;
+  font: 18px "Bebas Neue", cursive;
+  color: #f3f5f8;
+  outline: none;
+  cursor: pointer;
+}
+
+#main__container .heroe__info .heroe__details .fav__button .btn:hover {
+  background-color: #f3f5f8;
+  color: #ec1923;
+  -webkit-box-shadow: 0px 12px 8px #00000029;
+          box-shadow: 0px 12px 8px #00000029;
+}
+
+#main__container .pagination-container {
+  margin: 2rem;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main__container .pagination-container .change-page-btn {
+  margin: 0 10px;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ec1923;
+  border: 3px solid #ec1923;
+  border-radius: 5px;
+  font: 1.5rem "Bebas Neue", cursive;
+  color: #f3f5f8;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .pagination-container .change-page-btn {
+    margin: 0 15px;
+  }
+}
+
+#main__container .pagination-container .change-page-btn:hover {
+  background-color: #f3f5f8;
+  color: #ec1923;
+  -webkit-box-shadow: 0px 12px 8px #00000029;
+          box-shadow: 0px 12px 8px #00000029;
+}
+
+#main__container .pagination-container .page-number {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .pagination-container .page-number {
+    font-size: 1.2rem;
+  }
+}
+
+#main__container .loader-container {
+  position: absolute;
+  top: 13%;
+  left: 0;
+  z-index: 1000;
+  background-color: #f3f5f8;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main__container .loader-container .loader-image {
+  width: 12rem;
+}
+
+#main__container .loader-container .loader-text {
+  margin-top: 1rem;
+  color: #161616;
+  font: 1.5rem "Bebas Neue", cursive;
+}
+
+#main__container .error-container {
+  margin-top: -1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #161616;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  #main__container .error-container {
+    margin-top: -7rem;
+  }
+}
+
+#main__container .error-container .error-img {
+  width: 9rem;
+}
+
+#main__container .error-container .error-btn {
+  width: 10rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  padding-top: 5px;
+  background-color: #ec1923;
+  border: 3px solid #ec1923;
+  border-radius: 5px;
+  text-align: center;
+  font: 18px "Bebas Neue", cursive;
+  color: #f3f5f8;
+  outline: none;
+  cursor: pointer;
+}
+
+#main__container .error-container .error-btn:hover {
+  background-color: #f3f5f8;
+  color: #ec1923;
+  -webkit-box-shadow: 0px 12px 8px #00000029;
+          box-shadow: 0px 12px 8px #00000029;
+}
+
 @media screen and (min-width: 768px) {
   #main__container {
     padding: 0 14vw;
@@ -206,6 +541,11 @@ body {
   top: 43%;
   left: 88%;
   color: #161616;
+  cursor: pointer;
+}
+
+#main__container .search__container #search__icon:hover {
+  color: #ec1923;
 }
 
 @media screen and (min-width: 768px) {
@@ -341,224 +681,5 @@ body {
   #main__container .heores__conteiner .heroe .name-wrapper .heroe__name {
     font: 1.2rem "Bebas Neue", cursive;
   }
-}
-
-#main__container .heroe__info {
-  width: 100%;
-  height: 100%;
-  color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#main__container .heroe__info .close__details {
-  position: fixed;
-  top: 4%;
-  left: 86%;
-  z-index: 1000;
-  color: #ec1923;
-  -webkit-filter: drop-shadow(0px 2px 8px white);
-          filter: drop-shadow(0px 2px 8px white);
-}
-
-#main__container .heroe__info .heroe__image {
-  width: 100%;
-  height: 48%;
-  position: fixed;
-  top: -70px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  -webkit-box-shadow: 0px 12px 8px #00000029;
-          box-shadow: 0px 12px 8px #00000029;
-}
-
-@media screen and (min-width: 478px) {
-  #main__container .heroe__info .heroe__image {
-    height: 53%;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  #main__container .heroe__info .heroe__image {
-    height: 60%;
-    top: -74px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  #main__container .heroe__info .heroe__image {
-    height: 70%;
-    -o-object-position: 51% 25%;
-       object-position: 51% 25%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #main__container .heroe__info .heroe__image {
-    width: 42%;
-    height: 100%;
-    right: 59%;
-    top: 0;
-    -o-object-position: 80% 25%;
-       object-position: 80% 25%;
-  }
-}
-
-#main__container .heroe__info .heroe__details {
-  margin: 40vh 0;
-  text-align: center;
-}
-
-@media screen and (min-width: 600px) {
-  #main__container .heroe__info .heroe__details {
-    margin: 50vh 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  #main__container .heroe__info .heroe__details {
-    margin: 60vh 0;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #main__container .heroe__info .heroe__details {
-    margin: 5rem 0 0 40%;
-    height: 80vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    text-align: unset;
-  }
-}
-
-#main__container .heroe__info .heroe__details .heroe__title {
-  font: 3rem "Bebas Neue", cursive;
-  text-align: center;
-}
-
-#main__container .heroe__info .heroe__details .fav__button .btn {
-  width: 10rem;
-  height: 2.5rem;
-  background-color: #ec1923;
-  border: 3px solid #ec1923;
-  border-radius: 5px;
-  font: 18px "Bebas Neue", cursive;
-  color: #f3f5f8;
-  outline: none;
-  cursor: pointer;
-}
-
-#main__container .heroe__info .heroe__details .fav__button .btn:hover {
-  background-color: #f3f5f8;
-  color: #ec1923;
-  -webkit-box-shadow: 0px 12px 8px #00000029;
-          box-shadow: 0px 12px 8px #00000029;
-}
-
-#main__container .pagination-container {
-  margin: 2rem;
-  color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#main__container .pagination-container .change-page-btn {
-  margin: 0 10px;
-  width: 2rem;
-  height: 2rem;
-  background-color: #ec1923;
-  border: 3px solid #ec1923;
-  border-radius: 5px;
-  font: 1.5rem "Bebas Neue", cursive;
-  color: #f3f5f8;
-  cursor: pointer;
-  outline: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #main__container .pagination-container .change-page-btn {
-    margin: 0 15px;
-  }
-}
-
-#main__container .pagination-container .change-page-btn:hover {
-  background-color: #f3f5f8;
-  color: #ec1923;
-  -webkit-box-shadow: 0px 12px 8px #00000029;
-          box-shadow: 0px 12px 8px #00000029;
-}
-
-#main__container .pagination-container .page-number {
-  font-weight: bold;
-}
-
-@media screen and (min-width: 1024px) {
-  #main__container .pagination-container .page-number {
-    font-size: 1.2rem;
-  }
-}
-
-#main__container .loader-container {
-  position: absolute;
-  top: 13%;
-  left: 0;
-  z-index: 1000;
-  background-color: #f3f5f8;
-  width: 100%;
-  height: 100vh;
-  color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#main__container .loader-container .loader-image {
-  width: 12rem;
-}
-
-#main__container .loader-container .loader-text {
-  margin-top: 1rem;
-  color: #161616;
-  font: 1.5rem "Bebas Neue", cursive;
 }
 /*# sourceMappingURL=styles.css.map */

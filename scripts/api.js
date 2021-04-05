@@ -28,10 +28,10 @@ async function getHeroSearch(offset) {
   let url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${searchText}&offset=${offset}&ts=1&apikey=${apiKey}&hash=${hash}`;
   const heroSearch = await fetchApi(url);
   setPaginationBtns(heroSearch, true);
-
-  heroSearch.data.results.map((heroe) => {
-    displayHeroes(heroe);
-  });
+  let searchData = await heroSearch.data.results.length;
+  searchData > 0
+    ? heroSearch.data.results.map((heroe) => displayHeroes(heroe))
+    : displayError('No matches found.');
 }
 
 async function getHeroeComics(heroeId) {

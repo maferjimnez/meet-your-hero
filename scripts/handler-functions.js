@@ -44,6 +44,7 @@ function addHeroeToFavourites(name, id, path, extension) {
   };
   arrayFavouritesHeroe.push(objHeroe);
   localStorage.setItem('FavouriteHeroe', JSON.stringify(arrayFavouritesHeroe));
+  displayFavorites();
 }
 
 function removeHeroeFromFavourites(id) {
@@ -58,5 +59,5 @@ function removeHeroeFromFavourites(id) {
       );
     }
   console.log(arrayFavouritesHeroe);
-  displayFavourites();
+  displayFavorites();
 }

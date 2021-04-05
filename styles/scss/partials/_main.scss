@@ -1,4 +1,8 @@
 #main__container {
+  @import './maxHeroeInfo';
+  @import './pagination';
+  @import './loader';
+  @import './error';
   padding: 0 13vw;
 
   @media screen and (min-width: $avobe768) {
@@ -34,6 +38,10 @@
       top: 43%;
       left: 88%;
       color: $black;
+      cursor: pointer;
+      &:hover {
+        color: $red;
+      }
       @media screen and (min-width: $avobe768) {
         left: 93%;
       }
@@ -121,7 +129,4 @@
       }
     }
   }
-  @import './maxHeroeInfo';
-  @import './pagination';
-  @import './loader';
 }
