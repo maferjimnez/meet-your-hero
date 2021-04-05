@@ -19,7 +19,7 @@ const $searchSection = $('#search__container');
 const $seachInput = $('#search__input');
 
 //Pagination
-const $paginationContainer = $('#pagination-container');
+const $paginationContainer = $('.pagination-container');
 
 // Heroes
 const $heroesConteiner = $('#heores__conteiner');

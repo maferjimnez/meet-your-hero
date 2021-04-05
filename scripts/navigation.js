@@ -20,14 +20,16 @@ function displayHeroes(heroe) {
       </li>
       `);
 }
-displayHeroes();
 
 function closeSelectedHero() {
   window.scrollTo({ top: 0, behavior: 'auto' });
+  $loaderContainer.removeClass('hide').addClass('loader-container');
   $heroeInfoConteiner.removeClass('heroe__info').addClass('hide');
   $headerContainer.removeClass('hide').addClass('header__container');
   $searchSection.removeClass('hide').addClass('search__container');
   $heroesConteiner.removeClass('hide').addClass('heores__conteiner');
+  $paginationContainer.addClass('pagination-container').removeClass('hide');
+  $loaderContainer.addClass('hide').removeClass('loader-container');
 }
 
 function displayHeroeComics(comics) {
@@ -62,7 +64,7 @@ function displaySelectedHero(heroe, comics) {
         <p class="heroe__description">${
           heroe.description == ''
             ? `${heroe.description}`
-            : `We've been trying to write a description for this character for a long time and we still haven't come out with something, we are sorry...`
+            : `We've been trying to write a description for this character for a long time and we still haven't came out with something, we are sorry...`
         }</p>
         <div class="heroe__comics">
           <h2 class="comics-title">Appears on:</h2>
