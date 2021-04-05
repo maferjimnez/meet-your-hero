@@ -1,4 +1,3 @@
-// Burger menu
 function displayBurgerMenu() {
   $burgerMenu.toggleClass('navbar-menu-open');
   $burgerIcon.toggleClass('fa-times');
@@ -64,9 +63,9 @@ function displaySelectedHero(heroe, comics) {
     <div class="heroe-details">
         <h1 class="heroe-title">${heroe.name}</h1>
         <p class="heroe-description">${
-          heroe.description == ''
-            ? `${heroe.description}`
-            : `We've been trying to write a description for this character for a long time and we still haven't came out with something, we are sorry...`
+          heroe.description === ''
+            ? `We've been trying to write a description for this character but we still haven't came out with something, we are sorry...`
+            : `${heroe.description}`
         }</p>
         <div class="heroe-comics">
           <h2 class="comics-title">Appears on:</h2>

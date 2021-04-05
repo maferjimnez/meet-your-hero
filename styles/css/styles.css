@@ -466,7 +466,6 @@ body {
 }
 
 #main-container .error-container {
-  margin-top: -1rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,12 +479,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-@media screen and (min-width: 1024px) {
-  #main-container .error-container {
-    margin-top: -7rem;
-  }
 }
 
 #main-container .error-container .error-img {
