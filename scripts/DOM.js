@@ -1,33 +1,33 @@
 //** Header**//
-const $headerContainer = $('#header__container');
+const $headerContainer = $('#header-container');
 
 // Navbar
-const $navbarContainer = $('#navbar__container');
-const $burgerIcon = $('#burguer__icon');
-const $burgerMenu = $('#navbar__menu');
+const $navbarContainer = $('#navbar-container');
+const $burgerIcon = $('#burguer-icon');
+const $burgerMenu = $('#navbar-menu');
 
 // Hero
-const $heroTitle = $('#hero__title');
-const $heroDescription = $('#hero__paragraph');
+const $heroTitle = $('#hero-title');
+const $heroDescription = $('#hero-paragraph');
 
 //** Main**//
 // Loader
 const $loaderContainer = $('#loader-container');
 
 // Search bar
-const $searchSection = $('#search__container');
-const $seachInput = $('#search__input');
+const $searchSection = $('#search-container');
+const $seachInput = $('#search-input');
 
 //Pagination
 const $paginationContainer = $('.pagination-container');
 
 // Heroes
-const $heroesConteiner = $('#heores__conteiner');
-const $heroeInfoConteiner = $('#heroe__info');
+const $heroesConteiner = $('#heores-conteiner');
+const $heroeInfoConteiner = $('#heroe-info');
 
 // Max heroe information
-const $closeHeroeIcon = $('#close__details');
-const $heroeComics = $('#heroe__comics');
+const $closeHeroeIcon = $('#close-details');
+const $heroeComics = $('#heroe-comics');
 
 //** Footer **//
 const $footerContainer = $('#footer-container');

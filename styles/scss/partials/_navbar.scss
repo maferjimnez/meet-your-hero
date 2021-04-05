@@ -1,4 +1,4 @@
-.navbar__container {
+.navbar-container {
   padding: 0.5rem 1rem;
   display: flex;
   background-color: $backgroundDark;
@@ -6,13 +6,13 @@
     padding: 0.5rem 7rem;
   }
 
-  .images__container {
+  .images-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .link__logo {
+    .link-logo {
       cursor: pointer;
 
       .logo-img {
@@ -22,7 +22,7 @@
         }
       }
     }
-    #burguer__icon {
+    #burguer-icon {
       cursor: pointer;
       @media screen and (min-width: $avobe1024) {
         display: none;
@@ -30,7 +30,7 @@
     }
   }
 
-  .navbar__menu {
+  .navbar-menu {
     display: none;
     @media screen and (min-width: $avobe1024) {
       width: 35vw;
@@ -38,7 +38,7 @@
       justify-content: space-evenly;
       align-items: center;
 
-      .menu__item {
+      .menu-item {
         cursor: pointer;
         color: $white;
         font-size: 1.5rem;
@@ -55,7 +55,7 @@
       }
     }
   }
-  .navbar__menu__open {
+  .navbar-menu-open {
     width: 100vw;
     height: 100vh;
     padding-bottom: 40vh;
@@ -69,7 +69,7 @@
     justify-content: center;
     align-items: center;
 
-    .menu__item {
+    .menu-item {
       margin-bottom: 1rem;
       font-size: 1.5rem;
       cursor: pointer;

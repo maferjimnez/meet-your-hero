@@ -1,4 +1,4 @@
-.heores__conteiner {
+.heores-conteiner {
   margin: 3rem 0;
   display: flex;
   flex-wrap: wrap;
@@ -29,13 +29,13 @@
         width: 100%;
         padding: 5px 0px 0 0;
         clip-path: none;
-        .heroe__name {
+        .heroe-name {
           clip-path: none;
         }
       }
     }
 
-    .heroe__icon {
+    .heroe-icon {
       width: 18rem;
       height: 18rem;
       object-fit: cover;
@@ -56,7 +56,7 @@
       left: 0;
       clip-path: polygon(0 0, 92% 0, 100% 100%, 0 100%);
 
-      .heroe__name {
+      .heroe-name {
         width: 100%;
         height: 100%;
         padding: 5px 17px 5px 10px;

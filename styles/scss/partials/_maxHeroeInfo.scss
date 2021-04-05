@@ -1,4 +1,4 @@
-.heroe__info {
+.heroe-info {
   width: 100%;
   height: 100%;
   color: black;
@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-around;
 
-  .close__details {
+  .close-details {
     position: fixed;
     top: 4%;
     left: 86%;
@@ -16,7 +16,7 @@
     filter: drop-shadow(0px 2px 8px white);
     cursor: pointer;
   }
-  .heroe__image {
+  .heroe-image {
     width: 100%;
     height: 48%;
     position: fixed;
@@ -44,7 +44,7 @@
       object-position: 80% 25%;
     }
   }
-  .heroe__details {
+  .heroe-details {
     margin: 40vh 0 0;
     text-align: center;
     @media screen and (min-width: 600px) {
@@ -63,12 +63,12 @@
       text-align: unset;
     }
 
-    .heroe__title {
+    .heroe-title {
       font: $medium $primary-font;
       text-align: center;
     }
 
-    .heroe__comics {
+    .heroe-comics {
       margin: 2rem 0;
       @media screen and (min-width: $avobe1024) {
         margin: 2rem 0 1rem 0;
@@ -108,7 +108,7 @@
         }
       }
     }
-    .fav__button {
+    .fav-button {
       margin-bottom: 2rem;
 
       .btn {

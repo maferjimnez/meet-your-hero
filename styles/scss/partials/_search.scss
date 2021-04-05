@@ -1,9 +1,9 @@
-.search__container {
+.search-container {
   position: relative;
   display: flex;
   justify-content: center;
 
-  .search__input {
+  .search-input {
     width: 100%;
     height: 2.5rem;
     padding: 5px;
@@ -22,7 +22,7 @@
     }
   }
 
-  #search__icon {
+  #search-icon {
     position: absolute;
     top: 43%;
     left: 88%;

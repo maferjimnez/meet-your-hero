@@ -1,4 +1,4 @@
-#main__container {
+#main-container {
   @import './maxHeroeInfo';
   @import './pagination';
   @import './loader';
@@ -6,8 +6,8 @@
   @import './search';
   @import './heroes';
 
-  padding: 0 13vw;
+  padding: 0 13vw 5rem 13vw;
   @media screen and (min-width: $avobe768) {
-    padding: 0 14vw;
+    padding: 0 14vw 5rem 14vw;
   }
 }

@@ -33,10 +33,10 @@
     <title>Meet Your Hero</title>
   </head>
   <body>
-    <header class="header__container" id="header__container">
-      <nav class="navbar__container" id="navbar__container">
-        <div class="images__container">
-          <a href="index.html" class="link__logo">
+    <header class="header-container" id="header-container">
+      <nav class="navbar-container" id="navbar-container">
+        <div class="images-container">
+          <a href="index.html" class="link-logo">
             <img
               class="logo-img"
               src="/assets/marvel-logo.png"
@@ -44,50 +44,50 @@
             />
           </a>
           <div onclick="displayBurgerMenu()">
-            <i id="burguer__icon" class="fas fa-bars fa-lg"></i>
+            <i id="burguer-icon" class="fas fa-bars fa-lg"></i>
           </div>
         </div>
-        <ul class="navbar__menu" id="navbar__menu">
-          <li class="menu__item">
+        <ul class="navbar-menu" id="navbar-menu">
+          <li class="menu-item">
             <a class="home" href="index.html">Home</a>
           </li>
-          <li class="menu__item" onclick="hideBurgerMenu(); displayFavorites()">
+          <li class="menu-item" onclick="hideBurgerMenu(); displayFavorites()">
             Favorites
           </li>
         </ul>
       </nav>
 
-      <div class="hero__container" id="hero__container">
-        <h1 class="hero__title" id="hero__title">Meet your hero</h1>
-        <p class="hero__paragraph" id="hero__paragraph">
+      <div class="hero-container" id="hero-container">
+        <h1 class="hero-title" id="hero-title">Meet your hero</h1>
+        <p class="hero-paragraph" id="hero-paragraph">
           Find every Marvel superhero and discover their history and appearances
           in comics.
         </p>
       </div>
     </header>
-    <main class="main__container" id="main__container">
+    <main class="main-container" id="main-container">
       <div class="hide loader-container" id="loader-container">
         <img class="loader-image" src="/assets/groot-loader.gif" alt="" />
         <p class="loader-text">Loading...</p>
       </div>
-      <div class="search__container" id="search__container">
+      <div class="search-container" id="search-container">
         <input
-          class="search__input"
-          id="search__input"
+          class="search-input"
+          id="search-input"
           type="text"
           placeholder="Search your hero"
           autocomplete="off"
         />
         <i
-          id="search__icon"
+          id="search-icon"
           class="fas fa-search"
           onClick="getHeroSearch(0)"
         ></i>
       </div>
       <div class="pagination-container" id="pagination-container"></div>
-      <ul class="heores__conteiner" id="heores__conteiner"></ul>
+      <ul class="heores-conteiner" id="heores-conteiner"></ul>
       <div class="pagination-container" id="pagination-container"></div>
-      <div class="hide" id="heroe__info"></div>
+      <div class="hide" id="heroe-info"></div>
     </main>
     <footer class="footer-container" id="footer-container">
       <a class="footer-text" href="https://github.com/maferjimnez"
