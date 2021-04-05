@@ -3,6 +3,7 @@ Challenge para Eurekalabs.
 
 ## Sobre el challenge:
 Aplicación web para conocer a todos los héroes de Marvel, su historia y su aparación en cómics.
+<br></br>
 Link a la demo [Meet Your Hero](https://meet-your-hero-mafer.vercel.app/index.html)
 
 ## Stacks:
